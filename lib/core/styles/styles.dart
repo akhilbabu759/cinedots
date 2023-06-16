@@ -17,5 +17,9 @@ final bgwithouttran=LinearGradient(colors: [
         ]);
         final tilleColor=Color.fromRGBO(205, 205, 205, 1);
         final grayCol=Color.fromRGBO(154, 154, 154, 1);
+      final progressColor=LinearGradient(colors: [
+          Color.fromRGBO(102, 122, 191, 1),
+          Color.fromRGBO(102, 122, 191, 0.5)
+        ]);  
 
 }

@@ -1,3 +1,4 @@
+import 'package:cinedot/core/styles/styles.dart';
 import 'package:cinedot/screen/home/controller/bloc/home_controller_bloc.dart';
 
 import 'package:flutter/material.dart';
@@ -25,6 +26,10 @@ class MyApp extends StatelessWidget {
         // ),
       ],
       child: MaterialApp(
+        theme: ThemeData(
+        canvasColor: Color.fromARGB(255, 3, 38, 66), // Set the background color here
+        // Rest of your theme configurations
+      ),
         home: MyBottomNavigationBar(),
       ),
     );

@@ -6,11 +6,13 @@ import 'package:cinedot/screen/search/view/search.dart';
 import 'package:flutter/material.dart';
 
 class MyBottomNavigationBar extends StatefulWidget {
+  const MyBottomNavigationBar({super.key});
+
   @override
-  _MyBottomNavigationBarState createState() => _MyBottomNavigationBarState();
+  MyBottomNavigationBarState createState() => MyBottomNavigationBarState();
 }
 
-class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
+class MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
   int _currentIndex = 0;
 
   void _onTabTapped(int index) {
@@ -23,8 +25,10 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       
+      
       body: _getPage(_currentIndex),
       bottomNavigationBar:BottomNavigationBar(
+       
        
         currentIndex: _currentIndex,
         onTap: _onTabTapped,
