@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:cinedot/core/styles/styles.dart';
 import 'package:cinedot/screen/home/controller/bloc/home_controller_bloc.dart';
 import 'package:cinedot/screen/home/model/home_model.dart';
+import 'package:cinedot/screen/home/view/widget/after_carousel.dart';
 import 'package:cinedot/screen/home/view/widget/list_view_home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -83,34 +84,13 @@ class AfterAppBar extends StatelessWidget {
             );
           }).toList(),
         ),
-        Padding(
-          padding: const EdgeInsets.only(left: 19.0),
-          child: Row(
-            children: [
-              Text('Popular Movies',
-                      style: TextStyle(color: Colors.white, fontSize: 20)),
-            ],
-          ),
+        Expanded(
+          child: After_carousel(movieList: movieList),
         ),
-        Expanded(child: Padding(
-          padding: const EdgeInsets.only(left:15.0,top: 18),
-          child: HomeListView(movList: movieList),
-        )),
-        Padding(
-          padding: const EdgeInsets.only(left: 19.0,top: 10),
-          child: Row(
-            children: [
-              Text('Trending Now',
-                      style: TextStyle(color: Colors.white, fontSize: 20)),
-            ],
-          ),
-        ),
+       
         
-        Expanded(child: Padding(
-          padding: const EdgeInsets.only(left:15.0,top: 18),
-          child: HomeListView(movList: movieList),
-        ))
       ]),
     );
   }
 }
+

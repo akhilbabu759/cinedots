@@ -1,4 +1,5 @@
 import 'package:cinedot/core/styles/styles.dart';
+import 'package:cinedot/screen/film_view/view/view_details.dart';
 import 'package:cinedot/screen/home/model/home_model.dart';
 import 'package:cinedot/screen/home/view/widget/home_card.dart';
 import 'package:flutter/material.dart';
@@ -16,9 +17,13 @@ class HomeListView extends StatelessWidget {
         //   moviesCount = state.movieList!.length;
         // }
         // log(moviesCount.toString());
-        return HomeCard(description:movList![index].overview ,
-          imag: movList![index].posterPath,
-          text: movList![index].title,
+        return GestureDetector(onTap: () {
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) => ViewDetails(id:movList![index].id.toString(), movieList: movList),));
+        },
+          child: HomeCard(description:movList![index].overview ,
+            imag: movList![index].posterPath,
+            text: movList![index].title,
+          ),
         );
       },
       itemCount: movList?.length,

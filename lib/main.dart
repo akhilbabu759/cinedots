@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:cinedot/screen/home/view/home.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import 'screen/film_view/controller/bloc/movie_details_bloc.dart';
 import 'screen/home/view/widget/bottomNav.dart';
 
 void main(List<String> args) {
@@ -21,9 +22,9 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (context) => HomeControllerBloc(),
         ),
-        // BlocProvider(
-        //   create: (context) => SubjectBloc(),
-        // ),
+        BlocProvider(
+          create: (context) => MovieDetailsBloc(),
+        ),
       ],
       child: MaterialApp(
         theme: ThemeData(
