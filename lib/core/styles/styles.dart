@@ -11,4 +11,11 @@ Color.fromRGBO(1, 24, 54, 1)
 );
 //   final bgColor=[const Color.fromARGB(1, 42, 82, 1),
 // const Color.fromARGB(1, 24, 54, 1)];
+final bgwithouttran=LinearGradient(colors: [
+          Color.fromRGBO(1, 42, 82, 1),
+          Color.fromRGBO(1, 24, 54, 1)
+        ]);
+        final tilleColor=Color.fromRGBO(205, 205, 205, 1);
+        final grayCol=Color.fromRGBO(154, 154, 154, 1);
+
 }
