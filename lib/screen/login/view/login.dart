@@ -59,7 +59,7 @@ class GetStart extends StatelessWidget {
               ),
             ),
             Container(
-                decoration: BoxDecoration(
+                decoration:const BoxDecoration(
                   boxShadow: [
                     BoxShadow(
                         color: Color.fromRGBO(1, 42, 82, 1),
@@ -77,7 +77,7 @@ class GetStart extends StatelessWidget {
                   children: [
                     Text('Login'),
                     TextFormField(
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         border: InputBorder.none,
                         fillColor: Color.fromRGBO(42, 64, 90, 1),
                         filled: true,
