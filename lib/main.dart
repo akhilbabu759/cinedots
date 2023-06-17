@@ -1,5 +1,6 @@
 import 'package:cinedot/core/styles/styles.dart';
 import 'package:cinedot/screen/home/controller/bloc/home_controller_bloc.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 import 'package:flutter/material.dart';
 import 'package:cinedot/screen/home/view/home.dart';
@@ -8,7 +9,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'screen/film_view/controller/bloc/movie_details_bloc.dart';
 import 'screen/home/view/widget/bottomNav.dart';
 
-void main(List<String> args) {
+void main(List<String> args)async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
