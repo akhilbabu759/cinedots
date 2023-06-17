@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:cinedot/core/styles/styles.dart';
 
@@ -34,7 +36,8 @@ class Home extends StatelessWidget {
         ], begin: Alignment.topRight, end: Alignment.bottomRight)),
         child: BlocBuilder<HomeControllerBloc, HomeControllerState>(
           builder: (context, state) {
-            return state.movieList!.isEmpty
+            log(state.movieList.toString(),name: 'jop');
+            return state.movieList==null ||state.movieList!.isEmpty
                 ? const Center(child: CircularProgressIndicator())
                 : Column(
                     children: [

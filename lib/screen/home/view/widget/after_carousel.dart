@@ -2,8 +2,8 @@ import 'package:cinedot/screen/home/model/home_model.dart';
 import 'package:cinedot/screen/home/view/widget/list_view_home.dart';
 import 'package:flutter/material.dart';
 
-class After_carousel extends StatelessWidget {
-  const After_carousel({
+class AfterCarousel extends StatelessWidget {
+  const AfterCarousel({
     super.key,
     required this.movieList,
   });

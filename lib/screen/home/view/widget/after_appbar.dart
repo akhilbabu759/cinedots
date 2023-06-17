@@ -85,7 +85,7 @@ class AfterAppBar extends StatelessWidget {
           }).toList(),
         ),
         Expanded(
-          child: After_carousel(movieList: movieList),
+          child: AfterCarousel(movieList: movieList),
         ),
        
         
